@@ -26,7 +26,7 @@ soli_start_h = tower_h - soli_h - tower_wt;
 error = 0.17;
 
 //solinoide();
-tower();
+// tower();
 
 module tower() {
     cm_holder_h = card_deck_h+cm_h;

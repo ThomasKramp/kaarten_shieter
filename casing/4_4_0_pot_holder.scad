@@ -5,7 +5,7 @@ p_holder_l = 16;
 p_holder_w = 6;
 p_holder_h = card_holder_h+p_holder_l;
 
-pot_holder();
+// pot_holder();
 
 module pot_holder() {
     difference() {

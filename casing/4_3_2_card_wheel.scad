@@ -6,7 +6,7 @@ wheel_h = 6;
 shaft_d = 6;
 shaft_h = 12;
 
-wheel();
+// wheel();
 
 module wheel() {
     difference () {

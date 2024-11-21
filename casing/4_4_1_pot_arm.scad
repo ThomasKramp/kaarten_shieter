@@ -2,7 +2,7 @@ include <0_corner_cutout.scad>
 
 $fn = 63;
 
-pot_arm();
+// pot_arm();
 
 module pot_arm() {
     arm_l = 30;

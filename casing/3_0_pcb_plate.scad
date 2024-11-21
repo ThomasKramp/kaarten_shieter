@@ -26,7 +26,7 @@ pcb_d = 45.5;
 pcb_h = 5;
 pcb_slot_wt = (case_w - pcb_d)/2;
 
-pcb_plate();
+// pcb_plate();
 
 // Model
 module plate(width, depth, offset=[0,0,0]) {

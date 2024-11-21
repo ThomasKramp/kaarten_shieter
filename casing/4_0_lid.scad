@@ -2,9 +2,9 @@ include <0_corner_cutout.scad>
 include <1_2_battery.scad>
 include <4_1_mounts.scad>
 include <4_2_card_deck.scad>
-include <4_3_shooter_tower.scad>
+include <4_3_0_shooter_tower.scad>
 include <4_3_2_card_wheel.scad>
-include <4_4_pot_holder.scad>
+include <4_4_0_pot_holder.scad>
 include <4_4_1_pot_arm.scad>
 
 $fn = 63;

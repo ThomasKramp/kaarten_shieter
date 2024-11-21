@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "2a4b05bd7fff75ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d2e4d9e2f269628",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3353fb8529b629b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kaarten Shieter.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kaarten Shieter"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cb8cbb12225e5f55",
+    "type": "split",
+    "children": [
+      {
+        "id": "81c58013a12fc32f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebff36b573732e2f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "18ee26dfb0492edf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e8ecb00fabde72cd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9975bc7d7017adbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f4bfa7c927973e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9d0c258fa6053d8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kaarten Shieter.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Kaarten Shieter"
+            }
+          },
+          {
+            "id": "0b99fbc60a8ab88d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kaarten Shieter.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Kaarten Shieter"
+            }
+          },
+          {
+            "id": "0a96db3cdc2b65c3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a0d3a1b9d36cedfe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kaarten Shieter.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kaarten Shieter"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3353fb8529b629b2",
+  "lastOpenFiles": [
+    "Images/schematic/mcu_remote.png",
+    "Images/schematic/mcu_module.png",
+    "Kaarten Shieter.md",
+    "Images/schematic/supply_terminals_module.png",
+    "Images/ESP32_WROOM_Pinout.webp",
+    "Datasheets/2n7002_datasheet.PDF",
+    "Images/casing/box_outside.png",
+    "Images/casing/box_inside.png",
+    "Images/casing/buck_plate.png",
+    "Images/casing/pcb_plate.png",
+    "Images/casing/lid_bottom.png",
+    "Images/casing/lid_top.png",
+    "Images/casing/pot_holder.png",
+    "Datasheets/lm2596_datasheet.pdf",
+    "Datasheets/bcw71_datasheet.pdf",
+    "Datasheets/ft232r_datasheet.pdf",
+    "Datasheets/esp32_devkitc_schematic.pdf",
+    "Datasheets/drv8833_datasheet.pdf",
+    "BOM/ibom.html",
+    "BOM",
+    "Images/casing",
+    "Images/schematic",
+    "Untitled.canvas",
+    "Welcome.md"
+  ]
+}

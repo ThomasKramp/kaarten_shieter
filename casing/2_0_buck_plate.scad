@@ -11,7 +11,7 @@ bc_w = 44;
 bc_d = 21.5;
 bc_h = 13.5;
 
-buck_plate();
+// buck_plate();
 
 // Model
 module plate(width, depth, offset=[0,0,0]) {
