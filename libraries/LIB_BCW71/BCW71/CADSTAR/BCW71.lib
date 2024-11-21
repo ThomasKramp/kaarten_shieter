@@ -1,0 +1,18 @@
+.BCW71 :1 ;Bipolar Transistors - BJT SOT-23 NPN GP AMP
+SOT95P230X110-3N
+*STM Q
+*NGS
+*PLB 1="B" 2="E" 3="C"
+*MXP 3
+*DFN BCW71
+~!Manufacturer_Name (onsemi)
+~!Manufacturer_Part_Number (BCW71)
+~!Mouser Part Number (512-BCW71)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/BCW71?qs=UMEuL5FsraBSW5kwcQ3Wug%3D%3D)
+~!Arrow Part Number (BCW71)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/bcw71/on-semiconductor?region=europe)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/2/BCW71.pdf)
+~!Height (1.1mm)
+~!3D_Model (BCW71)
+BCW71
+1.1!U 2.1!U 3.1!U 

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BCW71
+D Bipolar Transistors - BJT SOT-23 NPN GP AMP
+K
+F https://componentsearchengine.com/Datasheets/2/BCW71.pdf
+$ENDCMP
+#
+#End Doc Library
