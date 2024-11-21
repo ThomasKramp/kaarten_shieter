@@ -1,0 +1,10 @@
+(fp_lib_table
+  (lib (name "COM-09032")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/COM-09032")(options "")(descr ""))
+  (lib (name "DM-OLED096-636")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/DM-OLED096-636")(options "")(descr ""))
+  (lib (name "UJ2-MIBH2-4-SMT")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/UJ2-MIBH2-4-SMT")(options "")(descr ""))
+  (lib (name "BCW71")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/LIB_BCW71/BCW71/KiCad")(options "")(descr ""))
+  (lib (name "6120XX21621_61200621621")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/6120XX21621_61200621621")(options "")(descr ""))
+  (lib (name "6130XX21821_61300621821")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/6130XX21821_61300621821")(options "")(descr ""))
+  (lib (name "Panelization")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/Panelization.pretty-master")(options "")(descr ""))
+  (lib (name "Joystick_THT")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/Joystick_THT.pretty")(options "")(descr ""))
+)
