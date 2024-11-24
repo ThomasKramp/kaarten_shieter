@@ -1,4 +1,4 @@
-uint8_t del = 500;
+uint16_t del = 500;
 
 void setup() {
   pinMode(16, OUTPUT);

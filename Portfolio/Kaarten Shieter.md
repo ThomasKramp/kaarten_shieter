@@ -174,7 +174,7 @@ Het schema ziet er als volgt uit:
 ![[laser_control.png]]
 ### Potentiometer arm
 Als sensor wordt er gebruik gemaakt van een potentiometer die,  met een arm, gaat meten of er nog kaarten zijn.
-Aangezien de ESP32 MCU werkt met een spanning van 3V3 en het een [analoge waarde kan mappen op 10 bits (4096)](https://lastminuteengineers.com/esp32-basics-adc/), heeft het een accuraatheid van 805µV.
+Aangezien de ESP32 MCU werkt met een spanning van 3V3 en het een [analoge waarde kan mappen op 12 bits (4096)](https://lastminuteengineers.com/esp32-basics-adc/), heeft het een accuraatheid van 805µV.
 We nemen een potentiometer van 10kOhm en meten de waarde die over de potentiometer staat.
 Voor de veiligheid zijn er een paar serieweerstanden toegevoegd zodat er geen open keten ontstaat. Neem 4 1kOhm weerstanden:
 - Als de potentiometer helemaal open staat *(0Ohm)*, dan zal er een voltage van 470mV gemeten worden.
@@ -199,7 +199,7 @@ Het menu scherm is een SSD1306 OLED scherm. Deze werkt op 3V3 en communiceert ov
 Het schema ziet er als volgt uit:
 ![[menu_screen.png]]
 ## Fouten in pin verdeling
-Uit verder onderzoek blijk dat [niet alle pinnen op de ESP32 WROOM MCU bruikbaar](https://lastminuteengineers.com/esp32-wroom-32-pinout-reference/) zijn.
+Uit verder onderzoek blijk dat [niet alle pinnen op de ESP32 WROOM MCU bruikbaar](https://lastminuteengineers.com/esp32-wroom-32-pinout-reference) zijn.
 
 | Bruikbaar | Pins | Probeer te vermijden | Pins | Onbruikbaar | Pins |
 | --------- | ---- | -------------------- | ---- | ----------- | ---- |
@@ -261,6 +261,18 @@ Enige footprints die niet standaard in KiCad staan zijn gevonden op [SnapMagic](
 # Behuizing
 ## 3D-printer
 De behuizing is gemaakt met OpenSCAD. De bestanden hiervoor zijn te vinden in *casing* folder.
+Nota's:
+- meer tolerantie op baterijen in box
+- opening voor switch in box
+- buck converter gaten staan verkeert
+- voeg step up converter toe MT3608 aan bc plate
+- bc plate scheidingen
+- wiel gat vergroten voor tandwiel
+- kijk alle elestikjes randen na
+- schieter toren aanpassen naar solinoide en motor apart
+- meer tolerantie tussen schuiver
+- geen tussenstuk meer
+- 
 ### Doos
 ![[box_outside.png]]
 ![[box_inside.png]]
