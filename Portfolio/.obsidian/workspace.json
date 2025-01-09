@@ -165,6 +165,9 @@
   },
   "active": "fcf71255a23a2f58",
   "lastOpenFiles": [
+    "Images/adjustments/esp_pin_adjustments.png",
+    "Images/adjustments/esp_pin_adjustments.jpeg",
+    "Images/adjustments",
     "Images/casing/lid_mount.png",
     "Images/casing/shooter_arm.png",
     "Images/casing/casing.png",
@@ -174,9 +177,7 @@
     "Images/casing/box_level_2.png",
     "Images/casing/box_level_1.png",
     "Images/casing/converter_plate.png",
-    "Images/casing/lid.png",
     "Kaarten Shieter.md",
-    "Images/lasercut/base_plate.png",
     "Images/lasercut",
     "Datasheets/lm2596_datasheet.pdf",
     "Datasheets/mt3608_datasheet.pdf",
@@ -186,7 +187,6 @@
     "Files/ibom.html",
     "BOM/ibom.html",
     "Datasheets/ibom.html",
-    "Files/school_componenten.pdf",
     "Untitled.canvas",
     "Welcome.md"
   ]

@@ -50,9 +50,9 @@ The card motor will be a brush motor.
 For the horizontal rotation the NEMA17 stepper motor is used. With this the direction of the module can be set.
 **Specifications**:
 - **Voltage:** 3V6
-- **Current:** 2A
+- **Max current:** 2A2
 - **Control:** H-Bridge & Pulses
-- **Maximum weight:** 5kg/1cm
+- **Stall torque:** 5 kg/cm
 
 ![nema17_datasheet](Datasheets/nema17_datasheet.pdf#page=2)
 ### Vertical rotation servo
@@ -61,6 +61,7 @@ This servo will be used to shoot at a certain angle.
 - **Voltage:** 5V.
 - **Current:** *Needs to be measured*
 - **Control:** H-Bridge & Pulses
+- **Stall torque:** 2.2 kg/cm
 
 ![mg90_datasheet](Datasheets/mg90_datasheet.pdf#page=1)
 ### Solenoid
@@ -75,7 +76,7 @@ Since the cards shoot in an arc, the laser would be inaccurate. Therefore it is 
 The sensor will be a potentiometer with a 3D printer arm. Depending on the voltage of the middle terminal, the amount of cards can be read.
 **Specifications**:
 - **Voltage:** 3V3.
-- **Current:** *Needs to be measured*
+- **Max current:** 236 µA *(reasoning can be found under "Potentiometer arm" in the "Electrical schematic" section)*
 - **Control:** Readings via ADC.
 ## Remote
 **Due to time restrictions the remote is not implemented it can be replaced using the Bluetooth on a phone.**
@@ -89,7 +90,7 @@ For a screen an OLED will be used, more specifically the SSD1306. This will show
 - **Assault mode:** Aim and shoot
 **Specifications**:
 - **Voltage:** 3V3.
-- **Current:**  *Needs to be measured*
+- **Maximum current:**  15 mA
 - **Control:** I2C
 
 ![ssd1306_datasheet](Datasheets/ssd1306_datasheet.pdf)
@@ -193,8 +194,18 @@ The schematic looks as follows:
 
 ![laser_control](Images/schematic/laser_control.png)
 ### Potentiometer arm
-For a sensor we'll make use of a potentiometer that, with a 3D printed arm, will measure how many cards are left. This will be a 10 kOhm resistor.
+For a sensor we'll make use of a potentiometer that, with a 3D printed arm, will measure how many cards are left. The potentiometer in question has a maximum resistance of 10 kOhm.
+
 To ensure there is no shorting we'll place two resistors *(of about 1kOhm)* between the potentiometer and both the source and the ground.
+- When the potentiometer is completely open *(0 Ohm)*, the measured voltage will be:
+$$V_{IN} = \frac{R_{UP}}{R_{UP} + R_{Pot Open} + R_{Down}} \cdot V_{CC} = \frac{2k\Omega}{2k\Omega + 10k\Omega + 2k\Omega} \cdot 3V3 = 470mV$$
+- When the potentiometer is completely closed *(10 kOhm)*, the measured voltage will be:
+$$V_{IN} = \frac{R_{UP} + R_{Pot Open}}{R_{UP} + R_{Pot Open} + R_{Down}} \cdot V_{CC} = \frac{2k\Omega + 10k\Omega}{2k\Omega + 10k\Omega + 2k\Omega} \cdot 3V3 = 2V82$$
+- At all times there will be a 14 kOhm resistor from the 3V3 source to the ground, meaning the current will be:
+$$I_{low}=\frac{U}{R_{high}}=\frac{3.3}{14*10^3}=0.236\text{mA}$$
+
+Since the ESP32 MCU functions at a voltage of 3V3 and [the analogue value can be mapped to 12 bits (4096)](https://lastminuteengineers.com/esp32-basics-adc/), the MCU has a accuracy of 805µV.
+
 The schematic looks as follows:
 
 ![pot_arm](Images/schematic/pot_arm.png)
@@ -1201,6 +1212,8 @@ module card_deck() {
 ## Lazercutter
 Only the base plate will be made using the lasercutter. Three of these base plates will be glued together to make the full base. The files can be found in the *[/laser_cutter](https://github.com/ThomasKramp/kaarten_shieter/tree/main/laser_cutter)*
 
+![base_plate](Images/lasercut/base_plate.png)
+
 ``` C
 $fn = 63;
 
@@ -1224,60 +1237,39 @@ projection() difference() {
     }
 }
 ```
-
-![base_plate](Images/lasercut/base_plate.png)
-
 # Implementation
-### Arm
-Since the ESP32 MCU functions at a voltage of 3V3 en the analogue value can be mapped to [analoge waarde kan mappen op 12 bits (4096)](https://lastminuteengineers.com/esp32-basics-adc/)
-
-Aangezien de ESP32 MCU werkt met een spanning van 3V3 en het een , heeft het een accuraatheid van 805µV.
-We nemen een potentiometer van 10kOhm en meten de waarde die over de potentiometer staat.
-Voor de veiligheid zijn er een paar serieweerstanden toegevoegd zodat er geen open keten ontstaat. Neem 4 1kOhm weerstanden:
-- Als de potentiometer helemaal open staat *(0Ohm)*, dan zal er een voltage van 470mV gemeten worden.
-$$V_{IN} = \frac{R_{UP}}{R_{UP} + R_{Pot Open} + R_{Down}} \cdot V_{CC} = \frac{2k\Omega}{2k\Omega + 10k\Omega + 2k\Omega} \cdot 3V3 = 470mV$$
-- Als de potentiometer helemaal gelsoten staat *(10kOhm)*, dan zal er een voltage van 2V82 gemeten worden.
-$$V_{IN} = \frac{R_{UP} + R_{Pot Open}}{R_{UP} + R_{Pot Open} + R_{Down}} \cdot V_{CC} = \frac{2k\Omega + 10k\Omega}{2k\Omega + 10k\Omega + 2k\Omega} \cdot 3V3 = 2V82$$
-
-
-==A 10 kOhm potentiometer flanked by two 2 kOhm resistors, leads to a 4 to 14 kOhm resistor. This leads to a current between 236 and 825 µA.==
-
-$I_{low}=\frac{U}{R_{high}}=\frac{3.3}{14*10^3}=0.236\text{mA}$
-$I_{high}=\frac{U}{R_{low}}=\frac{3.3}{4*10^3}=0.825\text{mA}$
-
-
-
 ## Faults & corrections
+### No battery support
 
+### Solenoid replaced by servo
 
-### Source problems
+### Casing adjustments
 
-### Solinoid removal
+### Faulty ESP pins used
+Out of testing and further research it appears that [some of the used ESP32 pins are unusable](https://lastminuteengineers.com/esp32-wroom-32-pinout-reference).
 
+| Usable | Pins | Try to avoid     | Pins | Unusable | Pins |
+| ------ | ---- | ---------------- | ---- | -------- | ---- |
+| GPIO4  | 26   | GPIO0            | 25   | GPIO1    | 35   |
+| GPIO13 | 16   | GPIO2            | 24   | GPIO3    | 34   |
+| GPIO14 | 13   | GPIO5            | 29   | GPIO6    | 20   |
+| GPIO16 | 27   | GPIO12           | 14   | GPIO7    | 21   |
+| GPIO17 | 28   | GPIO15           | 23   | GPIO8    | 22   |
+| GPIO18 | 30   | GPIO34 *(Input)* | 6    | GPIO9    | 17   |
+| GPIO19 | 31   | GPIO35 *(Input)* | 7    | GPIO10   | 18   |
+| GPIO21 | 33   | GPIO36 *(Input)* | 4    | GPIO11   | 19   |
+| GPIO22 | 36   | GPIO39 *(Input)* | 5    | /        |      |
+| GPIO23 | 37   | /                |      | /        |      |
+| GPIO25 | 10   | /                |      | /        |      |
+| GPIO26 | 11   | /                |      | /        |      |
+| GPIO27 | 12   | /                |      | /        |      |
+| GPIO32 | 8    | /                |      | /        |      |
+| GPIO33 | 9    | /                |      | /        |      |
+This means that the following pins need to be rerouted, while we need to cover up the solder pads, on the PCB, connecting them. 
+#### Module
+On the module these are the pins that control the horizontal motor.
 
-
-### Fouten in pin verdeling
-Uit verder onderzoek blijk dat [niet alle pinnen op de ESP32 WROOM MCU bruikbaar](https://lastminuteengineers.com/esp32-wroom-32-pinout-reference) zijn.
-
-| Bruikbaar | Pins | Probeer te vermijden | Pins | Onbruikbaar | Pins |
-| --------- | ---- | -------------------- | ---- | ----------- | ---- |
-| GPIO4     | 26   | GPIO0                | 25   | GPIO1       | 35   |
-| GPIO13    | 16   | GPIO2                | 24   | GPIO3       | 34   |
-| GPIO14    | 13   | GPIO5                | 29   | GPIO6       | 20   |
-| GPIO16    | 27   | GPIO12               | 14   | GPIO7       | 21   |
-| GPIO17    | 28   | GPIO15               | 23   | GPIO8       | 22   |
-| GPIO18    | 30   | GPIO34 *(Input)*     | 6    | GPIO9       | 17   |
-| GPIO19    | 31   | GPIO35 *(Input)*     | 7    | GPIO10      | 18   |
-| GPIO21    | 33   | GPIO36 *(Input)*     | 4    | GPIO11      | 19   |
-| GPIO22    | 36   | GPIO39 *(Input)*     | 5    | /           |      |
-| GPIO23    | 37   | /                    |      | /           |      |
-| GPIO25    | 10   | /                    |      | /           |      |
-| GPIO26    | 11   | /                    |      | /           |      |
-| GPIO27    | 12   | /                    |      | /           |      |
-| GPIO32    | 8    | /                    |      | /           |      |
-| GPIO33    | 9    | /                    |      | /           |      |
-Dit betekent dat de volgende pinnen doorverbonden moeten worden:
-- Voor de module:
+![esp_pin_adjustments](Images/adjustments/esp_pin_adjustments.png)
 
 | Signaal          | Oude Pin      | Nieuwe Pin    |
 | ---------------- | ------------- | ------------- |
@@ -1286,7 +1278,8 @@ Dit betekent dat de volgende pinnen doorverbonden moeten worden:
 | Motor_Hori_Green | 20 *(GPIO6)*  | 10 *(GPIO25)* |
 | Motor_Hori_Red   | 21 *(GPIO7)*  | 11 *(GPIO26)* |
 | Motor_Hori_Blue  | 22 *(GPIO8)*  | 12 *(GPIO27)* |
-- Voor de afstandsbediening:
+#### Remote
+On the remote these are the pins read the joystick states.
 
 | Signaal   | Oude Pin      | Nieuwe Pin    |
 | --------- | ------------- | ------------- |
@@ -1295,7 +1288,19 @@ Dit betekent dat de volgende pinnen doorverbonden moeten worden:
 | DOWN_JS   | 19 *(GPIO11)* | 10 *(GPIO25)* |
 | RIGHT_JS  | 20 *(GPIO6)*  | 11 *(GPIO26)* |
 | CENTER_JS | 21 *(GPIO7)*  | 12 *(GPIO27)* |
+### Only functional with source and USB
 
 ## Code
 
 ## Measurements
+
+# Improvements
+- Remove step up converter
+- Remove solenoid
+- Add more resistors to the card motor
+- Add test points on pcb (open pads)
+- Replace the faulty esp pin connections
+- Remove the laser
+- Use smaller capacitors (if possible)
+- Set both the measure point of the sensor and the card shooter contact to the middle of the deck
+- Make suggested edits to the casing
