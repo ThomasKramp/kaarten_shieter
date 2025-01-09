@@ -274,17 +274,14 @@ Footprints that aren't included in KiCads base installation are found on [SnapMa
 ### 3D back side
 ![pcb_3d_back](Images/pcb/pcb_3d_back.png)
 ## Assembly
-### Module front side
+### Module
 ![pcb_assembly_module_front](Images/pcb/pcb_assembly_module_front.png)
-### Module back side
 ![pcb_assembly_module_back](Images/pcb/pcb_assembly_module_back.png)
-### Programmer front side
+### Programmer
 ![pcb_assembly_module_front](Images/pcb/pcb_assembly_programmer_front.png)
-### Programmer back side
 ![pcb_assembly_programmer_back](Images/pcb/pcb_assembly_programmer_back.png)
-### Remote front side
+### Remote
 ![pcb_assembly_remote_front](Images/pcb/pcb_assembly_remote_front.png)
-### Remote back side
 ![pcb_assembly_remote_back](Images/pcb/pcb_assembly_remote_back.png)
 # Casing
 ## 3D-printer
