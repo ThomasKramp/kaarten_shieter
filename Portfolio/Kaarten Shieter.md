@@ -288,7 +288,7 @@ Footprints that aren't included in KiCads base installation are found on [SnapMa
 ![pcb_assembly_remote_back](Images/pcb/pcb_assembly_remote_back.png)
 # Casing
 ## 3D-printer
-The casing is made using OpenSCAD. The files can be found inthe *[/casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/casing)* directory.
+The casing is made using OpenSCAD. The files can be found inthe *[/3d_casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/lid_mount)* directory.
 Only a casing for the module was made due to time constraints.
 
 ![casing](Images/casing/casing.png)
