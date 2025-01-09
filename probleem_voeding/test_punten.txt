@@ -1,0 +1,11 @@
+Controleer m.b.v een labovoeding i.p.v de batterij welke stroom er gevraagd wordt door je PCB. Is deze stroom OK voor je batterijbordje?
+	Het brodje en de batterijen komen origineel van een 5V-1A powerbank (dit komende van 1 batterij).
+	De PCB vraagt in rust 70mA. Dus dit zou het normaal gezien niet mogen zijn.
+
+Controleer met een oscilloscoop op de voedingslijn of die 1,7V een stabiele DC spanning is. Het is ook mogelijk dat je batterijbordje continu (aan een hoge frequentie) aan-uit schakelt, dit een schijnbaar stabiele spanning van 1,7V geeft.
+	
+
+Controleer met de instelbare belasting (TTi instrument aan de kant van de schuivenkasten) hoe veel stroom je kan vragen van het batterijbordje vooraleer deze in beveiliging gaat.
+	
+
+Als je PCB minder stroom vraagt dan het batterijbordje schijnbaar kan leveren, gemeten met de instelbare belasting, kan de oorzaak ook liggen aan het feit dat je PCB een te hoge inschakelstroom vraagt. Dit kan bijvoorbeeld zijn omwille van capacitieve belasting door de elektrolytische ontkoppelcondensatoren.

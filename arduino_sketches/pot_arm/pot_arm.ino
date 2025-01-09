@@ -1,8 +1,8 @@
 // Potentiometer is connected to GPIO 34 (Analog ADC1_CH6) 
-const int potPin = 13;
+#define POT_PIN 13
 
 // variable for storing the potentiometer value
-int potValue = 0;
+uint16_t potValue = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -11,7 +11,13 @@ void setup() {
 
 void loop() {
   // Reading potentiometer value
-  potValue = analogRead(potPin);
+  potValue = analogRead(POT_PIN)/4;
   Serial.println(potValue);
   delay(500);
 }
+
+// Full:  0
+// Empty: 250
+
+// no cards:  1530 - 817 mostly 1535
+// 55 cards:  797 - 802 mostly 800

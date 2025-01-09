@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "BCW71"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-02-19-06:53:51)
+    (mountForm default
+        (footprintRef "SOT95P230X110-3N")
+        (spec "System")
+    )
+)

@@ -1,8 +1,0 @@
-(sym_lib_table
-  (lib (name "COM-09032")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/COM-09032/COM-09032.kicad_sym")(options "")(descr ""))
-  (lib (name "DM-OLED096-636")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/DM-OLED096-636/DM-OLED096-636.kicad_sym")(options "")(descr ""))
-  (lib (name "UJ2-MIBH2-4-SMT")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/UJ2-MIBH2-4-SMT/UJ2-MIBH2-4-SMT.kicad_sym")(options "")(descr ""))
-  (lib (name "BCW71")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/LIB_BCW71/BCW71/KiCad/BCW71.kicad_sym")(options "")(descr ""))
-  (lib (name "6120XX21621_61200621621")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/6120XX21621_61200621621/6120XX21621_61200621621.kicad_sym")(options "")(descr ""))
-  (lib (name "6130XX21821_61300621821")(type "KiCad")(uri "/home/thomas/Documents/studies/semester_5/I-prototyping/libraries/6130XX21821_61300621821/6130XX21821_61300621821.kicad_sym")(options "")(descr ""))
-)

@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "6d2e4d9e2f269628",
+        "id": "0f9d57da7d60eb5f",
         "type": "tabs",
         "children": [
           {
-            "id": "3353fb8529b629b2",
+            "id": "ba4fc906641e414f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kaarten Shieter.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kaarten Shieter"
+            }
+          },
+          {
+            "id": "fcf71255a23a2f58",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +35,8 @@
               "title": "Kaarten Shieter"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -159,33 +174,34 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3353fb8529b629b2",
+  "active": "fcf71255a23a2f58",
   "lastOpenFiles": [
-    "Images/pcb/pcb_routes_back.png",
-    "Images/pcb/pcb_routes_front.png",
+    "Images/casing/lid_mount.png",
+    "Images/casing/shooter_arm.png",
+    "Images/casing/casing.png",
+    "Images/casing/shooter_mount.png",
+    "Images/casing/sensor.png",
+    "Images/casing/box_level_3.png",
+    "Images/casing/box_level_2.png",
+    "Images/casing/box_level_1.png",
+    "Images/casing/converter_plate.png",
+    "Images/casing/lid.png",
     "Kaarten Shieter.md",
-    "Images/schematic/mcu_remote.png",
-    "Images/schematic/mcu_module.png",
-    "Images/schematic/supply_terminals_module.png",
-    "Images/ESP32_WROOM_Pinout.webp",
-    "Datasheets/2n7002_datasheet.PDF",
-    "Images/casing/box_outside.png",
-    "Images/casing/box_inside.png",
-    "Images/casing/buck_plate.png",
-    "Images/casing/pcb_plate.png",
-    "Images/casing/lid_bottom.png",
+    "Images/lasercut/base_plate.png",
+    "Images/lasercut",
     "Datasheets/lm2596_datasheet.pdf",
-    "Datasheets/bcw71_datasheet.pdf",
-    "Datasheets/ft232r_datasheet.pdf",
-    "Datasheets/esp32_devkitc_schematic.pdf",
-    "Datasheets/drv8833_datasheet.pdf",
+    "Datasheets/mt3608_datasheet.pdf",
+    "Datasheets/2n7002_datasheet.pdf",
+    "Datasheets/MT3608.PDF",
+    "Files/school_components.pdf",
+    "Files/ibom.html",
     "BOM/ibom.html",
-    "BOM",
-    "Images/casing",
-    "Images/schematic",
+    "Datasheets/ibom.html",
+    "Files/school_componenten.pdf",
     "Untitled.canvas",
     "Welcome.md"
   ]

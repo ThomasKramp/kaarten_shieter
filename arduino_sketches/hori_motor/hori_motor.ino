@@ -1,23 +1,28 @@
-uint8_t en_m = 9;
+#include <Stepper.h>
 
-uint8_t red = 8;
-uint8_t blue = 7;
-uint8_t green = 6;
-uint8_t black = 11;
+#define RED     32 // RED   -> pin 08 -> GPIO 32
+#define BLUE    33 // BLUE  -> pin 09 -> GPIO 33
+#define GREEN   25 // GREEN -> pin 10 -> GPIO 25
+#define BLACK   26 // BLACK -> pin 11 -> GPIO 26
+#define ENABLE  27 // EN_H  -> pin 12 -> GPIO 27
+
+Stepper stepper(360, RED, BLUE, GREEN, BLACK);
 
 void setup() {
-  for (int i = 1; i < 38; i++) {
-  pinMode(i, OUTPUT);
-  digitalWrite(i, HIGH);!
-  }
+  pinMode(RED, OUTPUT);
+  pinMode(BLUE, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(BLACK, OUTPUT);
+  pinMode(ENABLE, OUTPUT);
   
-  /*pinMode(en_m, OUTPUT);
-  digitalWrite(en_m, HIGH);
-  pinMode(red, OUTPUT);
-  digitalWrite(red, LOW);
-  pinMode(blue, OUTPUT);
-  digitalWrite(blue, HIGH);*/
+  digitalWrite(ENABLE, HIGH);
+  /*digitalWrite(BLACK, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, HIGH);
+  digitalWrite(RED, LOW);*/
+  stepper.setSpeed(30);
 }
 
 void loop() {
+  stepper.step(15);
 }

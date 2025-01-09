@@ -1,9 +1,0 @@
-Manufacturer=onsemi
-PartNumber=BCW71
-PartCategory=Transistor BJT NPN
-PackageCategory=SOT23 (3-Pin)
-PinCount=3
-Version=1.1
-Released=2020-02-19 06:53:51
-Downloaded=2024-10-15 10:18:55
-3D=Y
