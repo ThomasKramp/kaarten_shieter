@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0f9d57da7d60eb5f",
+        "id": "ce457e5b5df803d4",
         "type": "tabs",
         "children": [
           {
-            "id": "fcf71255a23a2f58",
+            "id": "37e687c9ad2e515a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,21 +163,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fcf71255a23a2f58",
+  "active": "37e687c9ad2e515a",
   "lastOpenFiles": [
-    "Images/adjustments/esp_pin_adjustments.png",
-    "Images/adjustments/esp_pin_adjustments.jpeg",
-    "Images/adjustments",
-    "Images/casing/lid_mount.png",
-    "Images/casing/shooter_arm.png",
-    "Images/casing/casing.png",
-    "Images/casing/shooter_mount.png",
-    "Images/casing/sensor.png",
-    "Images/casing/box_level_3.png",
-    "Images/casing/box_level_2.png",
-    "Images/casing/box_level_1.png",
-    "Images/casing/converter_plate.png",
+    "Images/adjustments/lid_adjustments.png",
+    "Images/adjustments/lid_adjustments.jpeg",
     "Kaarten Shieter.md",
+    "Images/module.jpeg",
+    "Images/adjustments.md",
+    "Images/adjustments/supply_voltage_drop.png",
+    "Images/adjustments/battery_voltage_drop.png",
+    "Images/adjustments/battery_voltage.png",
+    "Images/adjustments/starting_voltage_battery.png",
+    "Images/adjustments/starting_voltage_supply.png",
+    "Images/adjustments/3_voeding_batterij.png",
+    "Images/adjustments/2_beginspanning_batterij.png",
+    "Images/adjustments/1_beginspanning_bron.png",
+    "Images/adjustments",
     "Images/lasercut",
     "Datasheets/lm2596_datasheet.pdf",
     "Datasheets/mt3608_datasheet.pdf",
