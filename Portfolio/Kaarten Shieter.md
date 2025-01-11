@@ -298,7 +298,7 @@ The assembly was made easier using the [BOM file](https://github.com/ThomasKramp
 ![pcb_assembly_remote_back](Images/pcb/pcb_assembly_remote_back.png)
 # Casing
 ## 3D-printer
-The casing is made using OpenSCAD. The files can be found inthe *[/3d_casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/lid_mount)* directory.
+The casing is made using OpenSCAD. The files can be found in the *[/3d_casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/lid_mount)* directory.
 Only a casing for the module was made due to time constraints.
 
 [![casing](Images/casing/casing.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/0_casing.scad)
@@ -509,9 +509,27 @@ On the remote these are the pins read the joystick states.
 | CENTER_JS | 21 *(GPIO7)*  | 12 *(GPIO27)* |
 
 ## Code
+The code was made using the ArduinoIDE. The files can be found in the *[/arduino_sketches](https://github.com/ThomasKramp/kaarten_shieter/tree/main/arduino_sketches)* directory. The code was developed in three stage:
+1) Module usage
+2) Combinations
+3) Final sketch
 
-## Measurements
+The first step is to make sure all modules work separately. The modules in question are:
+- [Card Motor](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/1_card_motor/1_card_motor.ino)
+- [Servo](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/1_servo/1_servo.ino)
+- [Sensor](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/1_pot_arm/1_pot_arm.ino)
+- [Rotation Motor](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/1_hori_motor/1_hori_motor.ino)
+- [Bluetooth](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/1_bluetooth/1_bluetooth.ino)
 
+The second step consist of combining the base sketches step by step:
+- [Tilt & shoot](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/2_tilt_and_shoot/2_tilt_and_shoot.ino) *(combines **Card Motor** and **Servo**)*
+- [Measure & tilt](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/2_measure_and_tilt/2_measure_and_tilt.ino) *(combines **Servo** and **Sensor**)*
+- [Measure & shoot](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/2_measure_and_shoot/2_measure_and_shoot.ino) *(combines **Tilt & shoot** and **Measure & tilt**)*
+- [Bluetooth aim](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/2_bluetooth_aim/2_bluetooth_aim.ino) *(combines **Rotation motor** and **Bluetooth**)*
+
+The last step is the [combination of all sketches](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/3_aim_and_shoot/3_aim_and_shoot.ino). This is the file used in the demo.
+## Demo
+![demo](Files/demo.mp4)
 # Improvements
 - Remove step up converter
 - Remove solenoid
