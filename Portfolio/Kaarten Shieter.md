@@ -301,7 +301,7 @@ The assembly was made easier using the [BOM file](https://github.com/ThomasKramp
 The casing is made using OpenSCAD. The files can be found inthe *[/3d_casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/lid_mount)* directory.
 Only a casing for the module was made due to time constraints.
 
-[![casing](Images/casing/casing.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/0_cassing.scad)
+[![casing](Images/casing/casing.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/0_casing.scad)
 
 ***Note: Click on the image to open the code in GitHub***
 
@@ -395,26 +395,26 @@ module corner_round_cut(length, height) {
 ### PCB plate
 The PCB plate will hold the PCB and be place in the third level of the box.
 
-[![pcb_plate](Images/casing/pcb_plate.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/1_pcb.scad)
+[![pcb_plate](Images/casing/pcb_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/1_pcb.scad)
 ### Converter plate
 The converter plate will hold one step-up and two step-down converters. It will be placed on the second level of the box.
 
-[![converter_plate](Images/casing/converter_plate.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/2_converter.scad)
+[![converter_plate](Images/casing/converter_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/2_converter.scad)
 ### Box
 The box will consist of three levels to more easily assemble the entire project. Each level will contain certain components:
 1) Holds batteries and the horizontal motor
 2) Holds the converters and needs to have an opening for the batteries
 3) Holds the PCB
 
-[![box_level_1](Images/casing/box_level_1.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
-[![box_level_2](Images/casing/box_level_2.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
-[![box_level_3](Images/casing/box_level_3.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_1](Images/casing/box_level_1.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_2](Images/casing/box_level_2.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_3](Images/casing/box_level_3.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
 ### Sensor
 The sensor contains two parts:
 1) A mount to hold the potentiometer in place.
 2) An arm that will be mounted on the potentiometer to measure the height of the deck.
 
-[![sensor](Images/casing/sensor.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/4_sensor.scad)
+[![sensor](Images/casing/sensor.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/4_sensor.scad)
 ### Shooter
 The shooter consists of three parts:
 1) The mount to hold the servo
@@ -422,16 +422,16 @@ The shooter consists of three parts:
 3) The wheel that will be mounted to the axis of the card motor. This has a groove for rubber bands.
 ***Note that the servo is used for shooting and not the solenoid. This is later explained in the "Faults & corrections" section under implementation."***
 
-[![shooter_arm](Images/casing/shooter_arm.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_arm.scad)
-[![shooter_mount](Images/casing/shooter_mount.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_mount.scad)
+[![shooter_arm](Images/casing/shooter_arm.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_arm.scad)
+[![shooter_mount](Images/casing/shooter_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_mount.scad)
 ### Lid
 The lid is a combination of three parts:
 1) The shooter mount
 2) The lid mounts *(so it wont fall of the box)*
 3) The card holder
 
-[![lid_mount](Images/casing/lid_mount.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
-[![lid](Images/casing/lid.png)]((https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
+[![lid_mount](Images/casing/lid_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
+[![lid](Images/casing/lid.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
 ## Lazercutter
 Only the base plate will be made using the lasercutter. Three of these base plates will be glued together to make the full base. The files can be found in the *[/laser_cutter](https://github.com/ThomasKramp/kaarten_shieter/tree/main/laser_cutter)*
 
