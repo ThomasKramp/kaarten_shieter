@@ -63,7 +63,7 @@ This servo will be used to shoot at a certain angle.
 - **Control:** H-Bridge & Pulses
 - **Stall torque:** 2.2 kg/cm
 
-![mg90_datasheet](Datasheets/mg90_datasheet.pdf#page=1)
+![mg90_datasheet](mg90_datasheet.pdf#page=1)
 ### Solenoid
 The solnoid will push the motor so that the wheel touches against the cards when needed.
 **Specifications**:
@@ -213,7 +213,7 @@ The schematic looks as follows:
 The servo needs 5V to function and works on the basis of a pulse signal. For this we'll connect it to the 6V source.
 The schematic looks as follows:
 
-![[servo_vert.png]]
+![[Images/schematic/servo_vert.png]]
 ### Joystick
 The joystick works on the basis of a common pin that gets connected to a UP, DOWN, LEFT, RIGHT or CENTER pin. This common pin will be connected to the 3V3 source using a pull-up resistor. The other pins will be [read via an interrupt](https://lastminuteengineers.com/handling-esp32-gpio-interrupts-tutorial/) on the ESP32.
 
@@ -444,7 +444,8 @@ Only the base plate will be made using the lasercutter. Three of these base plat
 The module doesn't function when supplied with two 18650 batteries.
 When we measure the voltage, after flipping the power switch, we see that the input voltage going to the converters lowers to 1V7 for a moment and then returns to about 5V. Afterwards it does it again, but stays longer at 1V7 and not as long at 5V. This repeats until the input voltage stabalizes at 1V7. 
 
-![battery_voltage_drop](Images/adjustments/battery_voltage_drop.png)![battery_voltage](Images/adjustments/battery_voltage.png)
+![battery_voltage_drop](Images/adjustments/battery_voltage_drop.png)
+![battery_voltage](Images/adjustments/battery_voltage.png)
 
 This is most likely due to the large capacitors, on the step-up converter, step-down converters and the module PCB, that are requiring a large starting current.
 Due to this phenomenon, we'll have to continue by powering the module using a power supply. When we measure the input voltage, when turning on the module, we see the following:

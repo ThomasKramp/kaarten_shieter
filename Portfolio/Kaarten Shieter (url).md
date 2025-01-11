@@ -2,7 +2,7 @@ The goal of this project is to make a card shooter that can be remotely controll
 # Brainstorm
 The card shooter consists of 2 components: Remote & Module
 
-![base_diagram](Images/base_diagram.png)
+![base_diagram](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/base_diagram.png)
 
 The following ideas can be implemented in the project:
 - **Screen:**
@@ -34,9 +34,9 @@ The module will use the **ESP32-WROOM** chip since it has built-in Bluetooth sup
 - **Voltage:** 3V3
 - **Current:** *Needs to be measured*
 
-![ESP32_WROOM_Pinout](Images/ESP32_WROOM_Pinout.webp)
+![ESP32_WROOM_Pinout](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/ESP32_WROOM_Pinout.webp)
 
-![ESP32_WROOM_Pinout](Datasheets/esp32_wroom_datasheet.pdf#page=8)
+![ESP32_WROOM_Pinout](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/esp32_wroom_datasheet.pdf#page=8)
 ### Card motor
 The card motor will be a brush motor.
 - We will mount a wheel, with a rubber band, to shoot the cards
@@ -54,7 +54,7 @@ For the horizontal rotation the NEMA17 stepper motor is used. With this the dire
 - **Control:** H-Bridge & Pulses
 - **Stall torque:** 5 kg/cm
 
-![nema17_datasheet](Datasheets/nema17_datasheet.pdf#page=2)
+![nema17_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/nema17_datasheet.pdf#page=2)
 ### Vertical rotation servo
 This servo will be used to shoot at a certain angle.
 **Specifications**:
@@ -63,7 +63,7 @@ This servo will be used to shoot at a certain angle.
 - **Control:** H-Bridge & Pulses
 - **Stall torque:** 2.2 kg/cm
 
-![mg90_datasheet](Datasheets/mg90_datasheet.pdf#page=1)
+![mg90_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/mg90_datasheet.pdf#page=1)
 ### Solenoid
 The solnoid will push the motor so that the wheel touches against the cards when needed.
 **Specifications**:
@@ -93,14 +93,14 @@ For a screen an OLED will be used, more specifically the SSD1306. This will show
 - **Maximum current:**  15 mA
 - **Control:** I2C
 
-![ssd1306_datasheet](Datasheets/ssd1306_datasheet.pdf)
+![ssd1306_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/ssd1306_datasheet.pdf)
 ### Joystick
 For a Joystick will be a SKQUCAA010.
 **Specifications**:
 - **Voltage:** 3V3.
 - **Control:** Read via GPIO
 
-![skqucaa010_datasheet](Datasheets/skqucaa010_datasheet.pdf#page=2)
+![skqucaa010_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/skqucaa010_datasheet.pdf#page=2)
 ### Buttons
 ***This aspect will be left out since the control can be done using the joystick***
 # Electrical  schematic
@@ -110,7 +110,7 @@ Most of the external components, except for the servo, wil be connected to the P
 - [OctoParts](https://octopart.com/)
 - [AliExpress](https://nl.aliexpress.com)
 
-![school_components](Files/school_components.pdf)
+![school_components](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Files/school_components.pdf)
 ## Full schematic
 ![[schematic.pdf]]
 ## Components
@@ -119,7 +119,7 @@ As previously mentioned, the ESP32-WROOM will be used as microcontroller. It wil
 This means that we'll have to make a removable programmer.
 The PCB schematic is based on the schematic in of the dev-board datasheets:
 
-![esp32_wroom_datasheet](Datasheets/esp32_wroom_datasheet.pdf#page=19)
+![esp32_wroom_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/esp32_wroom_datasheet.pdf#page=19)
 
 Two groups of connectors will be provided:
 - **02x03 connector:** The programmer will be connected via these pins.
@@ -127,11 +127,11 @@ Two groups of connectors will be provided:
 The schematic looks as follows:
 - Module:
 
-![mcu_module](Images/schematic/mcu_module.png)
+![mcu_module](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/mcu_module.png)
 
 - Remote:
 
-![mcu_remote](Images/schematic/mcu_remote.png)
+![mcu_remote](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/mcu_remote.png)
 ### Programmer
 As previously mentioned, there will be a removable programmer to save out space on the PCB. The programmer will make use of a FT232R USB to UART converter.
 Specifications:
@@ -140,22 +140,22 @@ Specifications:
 The schematic of the PCB is based on two examples:
 - Het FT232R "*USB to MCU UART interface*" example:
 
-![ft232r_datasheet](Datasheets/ft232r_datasheet.pdf#page=31)
+![ft232r_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/ft232r_datasheet.pdf#page=31)
 
 - The ESP32 Devkit schematic:
 
-![esp32_devkitc_schematic](Datasheets/esp32_devkitc_schematic.pdf)
+![esp32_devkitc_schematic](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/esp32_devkitc_schematic.pdf)
 
 As shown in the Devkit schematic *(on the bottom left)*, the programmer makes use of two NPN-transistors to communicate with the MCU. For these transistors the BCW71 will be used.
 Specifications:
 - **Open collector voltage:** 5V
 - **Collector current:** 100mA
 
-![bcw71_datasheet](Datasheets/bcw71_datasheet.pdf#page=2)
+![bcw71_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/bcw71_datasheet.pdf#page=2)
 
 The schematic looks as follows:
 
-![programmer](Images/schematic/programmer.png)
+![programmer](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/programmer.png)
 
 To make sure the MCU can be programmed the following steps where taken:
 - The UART TX & RX pins are connected to *"traingular solder jumper pads"* in case the connections are wrong.
@@ -170,16 +170,16 @@ Since the driver contains two H-bridges, both the motor and solenoid can be cont
 - The solenoid functions at 6V.
 A separate source of 6V will be provided for this driver. *(The motor also functions at 6V)*
 
-![drv8833_datasheet](Datasheets/drv8833_datasheet.pdf)
+![drv8833_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/drv8833_datasheet.pdf)
 
 The schematic looks as follows:
 
-![h_bridge_driver_card](Images/schematic/h_bridge_driver_card.png)
+![h_bridge_driver_card](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/h_bridge_driver_card.png)
 ### Horizontal rotation H-bridge
 Two H-bridges are needed to control the NEMA17 *(stepper)* motor. Since the motor functions at 3V, the DRV8833 driver is applicable.
 The schematic looks as follows:
 
-![h_bridge_driver_hori](Images/schematic/h_bridge_driver_hori.png)
+![h_bridge_driver_hori](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/h_bridge_driver_hori.png)
 ### Laser controller
 To aim the module a [laser](https://nl.aliexpress.com/item/1005005965904497.html?spm=a2g0o.productlist.main.1.486f5a5fnkwrmv&algo_pvid=1d03160c-83f5-4386-951f-2b8b5557513d&algo_exp_id=1d03160c-83f5-4386-951f-2b8b5557513d-0&pdp_npi=4%40dis%21EUR%213.06%213.06%21%21%2123.17%2123.17%21%4021038e8317283929845612749e1452%2112000035084960358%21sea%21BE%214336790662%21X&curPageLogUid=0sLpbIOsMe3v&utparam-url=scene%3Asearch%7Cquery_from%3A) is used. This one works at 5V. This means we'll have to connect this to the 6V source connected to the card H-bridge.
 
@@ -188,11 +188,11 @@ Specifications:
 - **Gate threshold voltage:** 2V1
 - **Maximum drain current:** 115mA
 
-![2n7002_datasheet](Datasheets/2n7002_datasheet.pdf#page=2)
+![2n7002_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/2n7002_datasheet.pdf#page=2)
 
 The schematic looks as follows:
 
-![laser_control](Images/schematic/laser_control.png)
+![laser_control](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/laser_control.png)
 ### Potentiometer arm
 For a sensor we'll make use of a potentiometer that, with a 3D printed arm, will measure how many cards are left. The potentiometer in question has a maximum resistance of 10 kOhm.
 
@@ -208,31 +208,31 @@ Since the ESP32 MCU functions at a voltage of 3V3 and [the analogue value can be
 
 The schematic looks as follows:
 
-![pot_arm](Images/schematic/pot_arm.png)
+![pot_arm](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/pot_arm.png)
 ### Vertical rotation servo
 The servo needs 5V to function and works on the basis of a pulse signal. For this we'll connect it to the 6V source.
 The schematic looks as follows:
 
-![[servo_vert.png]]
+![[https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/schematic/servo_vert.png]]
 ### Joystick
 The joystick works on the basis of a common pin that gets connected to a UP, DOWN, LEFT, RIGHT or CENTER pin. This common pin will be connected to the 3V3 source using a pull-up resistor. The other pins will be [read via an interrupt](https://lastminuteengineers.com/handling-esp32-gpio-interrupts-tutorial/) on the ESP32.
 
-![skqucaa010_datasheet](Datasheets/skqucaa010_datasheet.pdf#page=2)
+![skqucaa010_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/skqucaa010_datasheet.pdf#page=2)
 
 The schematic looks as follows:
 
-![joystick](Images/schematic/joystick.png)
+![joystick](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Images/schematic/joystick.png)
 ### Menu screen
 The menu screen is a SSD1306 OLED screen.
 Specifications:
 - **Voltage:** 3V3
 - **Communication protocol:** I2C
 
-![ssd1306_datasheet](Datasheets/ssd1306_datasheet.pdf)
+![ssd1306_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/ssd1306_datasheet.pdf)
 
 The schematic looks as follows:
 
-![menu_screen](Images/schematic/menu_screen.png)
+![menu_screen](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/schematic/menu_screen.png)
 ### Source
 Both the remote and the module need a source, for this we'll use 18650 lithium-ion batteries in combination with step-up and step-down converters.
 Included with each battery is a micro-USB charger board that has 5V output pads.
@@ -245,13 +245,13 @@ Specifications:
 	- **Input voltage:** 4V - 40V
 	- **Output voltage:** 1V23 - 35V
 
-![lm2596_datasheet](Datasheets/lm2596_datasheet.pdf)
+![lm2596_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/lm2596_datasheet.pdf)
 
 - **Step up converter:** MT3608
 	- **Input voltage:** 2V - 24V
 	- **Output voltage:** 2V - 28V
 
-![mt3608_datasheet](Datasheets/mt3608_datasheet.pdf)
+![mt3608_datasheet](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Portfolio/Datasheets/mt3608_datasheet.pdf)
 
 The module needs three operating voltages: 3V3, 3V3 motor control & 6V motor control
 - **6V MC:** Can be achieved using the step-up converter.
@@ -259,12 +259,12 @@ The module needs three operating voltages: 3V3, 3V3 motor control & 6V motor con
 All three operating voltages will be connected to the PCB via a screw terminal.
 The schematic looks as follows:
 
-![supply_terminals_module](Images/schematic/supply_terminals_module.png)
+![supply_terminals_module](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/schematic/supply_terminals_module.png)
 
 The remote will only need a single source of 3V3. this can be done with a single battery and a step-down converter.
 The schematic looks as follows:
 
-![supply_terminals_remote](Images/schematic/supply_terminals_remote.png)
+![supply_terminals_remote](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/schematic/supply_terminals_remote.png)
 
 # PCB
 The PCB was made using KiCad and ordered at [JLCPCB](https://jlcpcb.com/). it consists out of three parts:
@@ -274,34 +274,34 @@ The PCB was made using KiCad and ordered at [JLCPCB](https://jlcpcb.com/). it co
 Footprints that aren't included in KiCads base installation are found on [SnapMagic](https://www.snapeda.com/home/) or made via the footprint editor *(these can be found in [/shema/libraries](https://github.com/ThomasKramp/kaarten_shieter/tree/main/schema/libraries) folder)*.
 ## Routes
 ### All routes
-![pcb_routes](Images/pcb/pcb_routes.png)
+![pcb_routes](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_routes.png)
 ### Front side routes
-![pcb_routes_front](Images/pcb/pcb_routes_front.png)
+![pcb_routes_front](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_routes_front.png)
 ### Back side routes
-![pcb_routes_back](Images/pcb/pcb_routes_back.png)
+![pcb_routes_back](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_routes_back.png)
 ## 3D
 ### 3D front side
-![pcb_3d_front](Images/pcb/pcb_3d_front.png)
+![pcb_3d_front](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_3d_front.png)
 ### 3D back side
-![pcb_3d_back](Images/pcb/pcb_3d_back.png)
+![pcb_3d_back](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_3d_back.png)
 ## Assembly
 The assembly was made easier using the [BOM file](https://github.com/ThomasKramp/kaarten_shieter/blob/main/Portfolio/Files/ibom.html).
  generated by KiCad.
 ### Module
-![pcb_assembly_module_front](Images/pcb/pcb_assembly_module_front.png)
-![pcb_assembly_module_back](Images/pcb/pcb_assembly_module_back.png)
+![pcb_assembly_module_front](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_module_front.png)
+![pcb_assembly_module_back](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_module_back.png)
 ### Programmer
-![pcb_assembly_module_front](Images/pcb/pcb_assembly_programmer_front.png)
-![pcb_assembly_programmer_back](Images/pcb/pcb_assembly_programmer_back.png)
+![pcb_assembly_module_front](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_programmer_front.png)
+![pcb_assembly_programmer_back](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_programmer_back.png)
 ### Remote
-![pcb_assembly_remote_front](Images/pcb/pcb_assembly_remote_front.png)
-![pcb_assembly_remote_back](Images/pcb/pcb_assembly_remote_back.png)
+![pcb_assembly_remote_front](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_remote_front.png)
+![pcb_assembly_remote_back](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/pcb/pcb_assembly_remote_back.png)
 # Casing
 ## 3D-printer
 The casing is made using OpenSCAD. The files can be found in the *[/3d_casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/3d_casing)* directory.
 Only a casing for the module was made due to time constraints.
 
-[![casing](Images/casing/casing.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/0_casing.scad)
+[![casing](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/casing.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/0_casing.scad)
 
 ***Note: Click on the image to open the code in GitHub***
 
@@ -395,26 +395,26 @@ module corner_round_cut(length, height) {
 ### PCB plate
 The PCB plate will hold the PCB and be place in the third level of the box.
 
-[![pcb_plate](Images/casing/pcb_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/1_pcb.scad)
+[![pcb_plate](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/pcb_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/1_pcb.scad)
 ### Converter plate
 The converter plate will hold one step-up and two step-down converters. It will be placed on the second level of the box.
 
-[![converter_plate](Images/casing/converter_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/2_converter.scad)
+[![converter_plate](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/converter_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/2_converter.scad)
 ### Box
 The box will consist of three levels to more easily assemble the entire project. Each level will contain certain components:
 1) Holds batteries and the horizontal motor
 2) Holds the converters and needs to have an opening for the batteries
 3) Holds the PCB
 
-[![box_level_1](Images/casing/box_level_1.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
-[![box_level_2](Images/casing/box_level_2.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
-[![box_level_3](Images/casing/box_level_3.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_1](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/box_level_1.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_2](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/box_level_2.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
+[![box_level_3](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/box_level_3.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/3_box.scad)
 ### Sensor
 The sensor contains two parts:
 1) A mount to hold the potentiometer in place.
 2) An arm that will be mounted on the potentiometer to measure the height of the deck.
 
-[![sensor](Images/casing/sensor.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/4_sensor.scad)
+[![sensor](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/sensor.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/4_sensor.scad)
 ### Shooter
 The shooter consists of three parts:
 1) The mount to hold the servo
@@ -422,20 +422,20 @@ The shooter consists of three parts:
 3) The wheel that will be mounted to the axis of the card motor. This has a groove for rubber bands.
 ***Note that the servo is used for shooting and not the solenoid. This is later explained in the "Faults & corrections" section under implementation."***
 
-[![shooter_arm](Images/casing/shooter_arm.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_arm.scad)
-[![shooter_mount](Images/casing/shooter_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_mount.scad)
+[![shooter_arm](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/shooter_arm.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_arm.scad)
+[![shooter_mount](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/shooter_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/5_shooter_mount.scad)
 ### Lid
 The lid is a combination of three parts:
 1) The shooter mount
 2) The lid mounts *(so it wont fall of the box)*
 3) The card holder
 
-[![lid_mount](Images/casing/lid_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid_mount.scad)
-[![lid](Images/casing/lid.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
+[![lid_mount](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/lid_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid_mount.scad)
+[![lid](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/lid.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
 ## Lazercutter
 Only the base plate will be made using the lasercutter. Three of these base plates will be glued together to make the full base. The files can be found in the *[/laser_cutter](https://github.com/ThomasKramp/kaarten_shieter/tree/main/laser_cutter)*
 
-[![base_plate](Images/lasercut/base_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/laser_cutter/plate.scad)
+[![base_plate](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/lasercut/base_plate.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/laser_cutter/plate.scad)
 
 ***Note: Click on the image to open the code in GitHub***
 # Implementation
@@ -444,18 +444,19 @@ Only the base plate will be made using the lasercutter. Three of these base plat
 The module doesn't function when supplied with two 18650 batteries.
 When we measure the voltage, after flipping the power switch, we see that the input voltage going to the converters lowers to 1V7 for a moment and then returns to about 5V. Afterwards it does it again, but stays longer at 1V7 and not as long at 5V. This repeats until the input voltage stabalizes at 1V7. 
 
-![battery_voltage_drop](Images/adjustments/battery_voltage_drop.png)![battery_voltage](Images/adjustments/battery_voltage.png)
+![battery_voltage_drop](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/adjustments/battery_voltage_drop.png)
+![battery_voltage](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/adjustments/battery_voltage.png)
 
 This is most likely due to the large capacitors, on the step-up converter, step-down converters and the module PCB, that are requiring a large starting current.
 Due to this phenomenon, we'll have to continue by powering the module using a power supply. When we measure the input voltage, when turning on the module, we see the following:
 
-![supply_voltage_drop](Images/adjustments/supply_voltage_drop.png)
+![supply_voltage_drop](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/adjustments/supply_voltage_drop.png)
 ### Solenoid replaced by servo
 The original plan was to use a solenoid to push down the wheel so it made contact with the deck, and then retract the arm as to not shoot out all the cards at ones *(the motor and wheel would be lifted using rubber bands)*.
 
 The following image was the 3D printed part that would help with this operation.
 
-![card_tower](Images/casing/card_tower.png)
+![card_tower](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/casing/card_tower.png)
 
 There were a couple of problems with this:
 - The solenoid either had to short of an arm to push the card motor and the wheel completely down *(when the deck was empty)*, or would need to high of a current to operate *(2A5)* leading to the system resetting.
@@ -476,7 +477,7 @@ Three problems occurred while assembling and utilizing the lid of the case:
 3) **The sensor module couldn't touch the bottom *(blue)*.**
     To solve this, cut a part of the wall *(on the side of the sensor)* and lower the gap to the bottom of the plate. Then cut a hole where the sensor arm and the bottom of the lid meet.
 
-![lid_adjustments](Images/adjustments/lid_adjustments.png)
+![lid_adjustments](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/adjustments/lid_adjustments.png)
 ### Faulty ESP pins used
 Out of testing and further research it appears that [some of the used ESP32 pins are unusable](https://lastminuteengineers.com/esp32-wroom-32-pinout-reference).
 
@@ -502,7 +503,7 @@ This means that the following pins need to be rerouted, while we need to cover u
 #### Module
 On the module these are the pins that control the horizontal motor.
 
-![esp_pin_adjustments](Images/adjustments/esp_pin_adjustments.png)
+![esp_pin_adjustments](https://github.com/ThomasKramp/kaarten_shieter/tree/main/Images/adjustments/esp_pin_adjustments.png)
 
 | Signaal          | Oude Pin      | Nieuwe Pin    |
 | ---------------- | ------------- | ------------- |
