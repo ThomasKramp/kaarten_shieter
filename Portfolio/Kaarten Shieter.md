@@ -451,8 +451,21 @@ Due to this phenomenon, we'll have to continue by powering the module using a po
 
 ![supply_voltage_drop](Images/adjustments/supply_voltage_drop.png)
 ### Solenoid replaced by servo
-==Note: remove code from casing and link files==
+The original plan was to use a solenoid to push down the wheel so it made contact with the deck, and then retract the arm as to not shoot out all the cards at ones *(the motor and wheel would be lifted using rubber bands)*.
 
+The following image was the 3D printed part that would help with this operation.
+
+![card_tower](Images/casing/card_tower.png)
+
+There were a couple of problems with this:
+- The solenoid either had to short of an arm to push the card motor and the wheel completely down *(when the deck was empty)*, or would need to high of a current to operate *(2A5)* leading to the system resetting.
+- When the wheel is pressed to tightly on the cards it stops, and since the solenoid can only press down or not *(not in intervals)*, no cards would be shot.
+- The solenoid would not be able to push down the card motor and wheel due to the rubber bands being to firm, or the rubber bands wouldn't pull up the card motor and wheel far enough from the deck.
+
+These problems could all be solved by using the servo and mounting both the card motor and wheel to it using an rod *(arm)*.
+- It has a lower current.
+- The angle can be programmed and based on what the sensor reads.
+- No elastic bands need to be used.
 ### Lid adjustments
 Three problems occurred while assembling and utilizing the lid of the case:
 1) **The servo couldn't be placed inside its mount *(green)*.**
@@ -484,6 +497,7 @@ Out of testing and further research it appears that [some of the used ESP32 pins
 | GPIO27 | 12   | /                |      | /        |      |
 | GPIO32 | 8    | /                |      | /        |      |
 | GPIO33 | 9    | /                |      | /        |      |
+
 This means that the following pins need to be rerouted, while we need to cover up the solder pads, on the PCB, connecting them. 
 #### Module
 On the module these are the pins that control the horizontal motor.
@@ -529,14 +543,38 @@ The second step consist of combining the base sketches step by step:
 
 The last step is the [combination of all sketches](https://github.com/ThomasKramp/kaarten_shieter/blob/main/arduino_sketches/3_aim_and_shoot/3_aim_and_shoot.ino). This is the file used in the demo.
 ## Demo
-![demo](Files/demo.mp4)
+![demo](https://youtu.be/q7-Qh3FckiI)
 # Improvements
-- Remove step up converter
-- Remove solenoid
-- Add more resistors to the card motor
-- Add test points on pcb (open pads)
-- Replace the faulty esp pin connections
-- Remove the laser
-- Use smaller capacitors (if possible)
-- Set both the measure point of the sensor and the card shooter contact to the middle of the deck
-- Make suggested edits to the casing
+- **Remove the laser components.**
+  As mentioned in the beginning and visible in the video, a laser pointer would be worthless due to the limited range of the module and the arcing when a card is shot.
+
+- **Remove the solenoid components and the step-up converter.**
+  As mentioned in the *"Faults & corrections"* section, the solenoid is impractical. It either consumes to much power or it has a small rod with not enough reach.
+  This means that the step-up converter can also be removed, since the module doesn't have any need for a 7V source anymore.
+  Any feedback from the step-down converters *(SDC input has power but SDC output, e.g. when programming without a supply)* won't occur anymore.
+  Besides that this action would remove two large capacitors, that could help with the power via battery problem as stated in the *"Faults & corrections"* section
+
+- **Add optional resistors or a potentiometer between the card motor and its supply.**
+  This should limit the current through the motor and leads to the possibility of implementing battery power.
+  Besides that, it will make it possible to set the motor speed.
+
+- **Add more test points *(open pads)* to the PCB.**
+  The tape under the pins could have been avoided if test pads were added in combination with the external pin headers.
+
+- **Relocate the connections that are connected to the ESP32 flash pins.**
+  As mentioned in the *"Faults & corrections"* section, some modules are connected to unusable pins. Relocate the connections, so we don't need to use the external pin headers.
+
+- **Use smaller capacitors *(if possible)*.**
+  Reducing the capacitor sizes, of the step-down converters and the decouple capacitor, might make it possible to utilize battery power.
+
+- **Set both the contact point of the sensor and of the card shooter to the center of the card *(or on the same line)*.**
+  This should help with calibrating the sensor.
+
+- **Edit the lid's .scad file to include the changes that are mentioned in the *"Faults & corrections"* section**
+  Other possible changes that will improve the build are:
+  - Make the servo mount detachable like the sensor.
+  - Remove the current two battery slots from the box *(or add four more to get a total of six and rearrange them to distribute weight)*.
+  - Shorten the rotation motor cable.
+
+- **Remake the PCB and the case so that the antenna of the ESP32 is brought outside the casing.**
+  The remote *(my phone)* had difficulty finding and staying connected to the ESP32 when encased by the casing. This drastically lessened when removing the lid.
