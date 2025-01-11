@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kaarten Shieter (url).md",
+                "file": "Kaarten Shieter URL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kaarten Shieter (url)"
+              "title": "Kaarten Shieter URL"
             }
           },
           {
@@ -180,7 +180,8 @@
   "active": "2457ddb535a353fb",
   "lastOpenFiles": [
     "Kaarten Shieter.md",
-    "Kaarten Shieter (url).md",
+    "pdf-export.css",
+    "Kaarten Shieter URL.md",
     "Datasheets/mg90_datasheet.pdf",
     "Files.md",
     "Images/arduino_ide_settings.png",
@@ -202,7 +203,6 @@
     "Datasheets/mt3608_datasheet.pdf",
     "Datasheets/2n7002_datasheet.pdf",
     "Datasheets/MT3608.PDF",
-    "Files/school_components.pdf",
     "Untitled.canvas",
     "Welcome.md"
   ]

@@ -1,1 +1,6 @@
-{}
+{
+  "enabledCssSnippets": [
+    "pdf-export"
+  ],
+  "theme": "system"
+}

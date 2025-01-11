@@ -1,0 +1,9 @@
+@media print {
+    body {
+        color: black !important;
+        background: white !important;
+    }
+    .markdown-preview-view {
+        background: white !important;
+    }
+}

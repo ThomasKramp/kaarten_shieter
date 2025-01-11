@@ -112,7 +112,7 @@ Most of the external components, except for the servo, wil be connected to the P
 
 ![school_components](Files/school_components.pdf)
 ## Full schematic
-![[schematic.pdf]]
+![schematic](Schematic/schematic.pdf)
 ## Components
 ### Microcontroller
 As previously mentioned, the ESP32-WROOM will be used as microcontroller. It will be placed without dev-board to minimize the PCB surface, since the horizontal motor will lose torque the bigger the rotated surface becomes.
