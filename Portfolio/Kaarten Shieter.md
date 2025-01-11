@@ -547,7 +547,7 @@ The second step consist of combining the base sketches step by step:
 
 The last step is the [combination of all sketches](../arduino_sketches/3_aim_and_shoot/3_aim_and_shoot.ino). This is the file used in the demo.
 ## Demo
-![demo](Files/demo.mp4)
+[![demo](Files/demo.mp4)](Files/demo.mp4)
 # Improvements
 - **Remove the laser components.**
   As mentioned in the beginning and visible in the video, a laser pointer would be worthless due to the limited range of the module and the arcing when a card is shot.
