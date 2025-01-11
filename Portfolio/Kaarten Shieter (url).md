@@ -430,7 +430,7 @@ The lid is a combination of three parts:
 2) The lid mounts *(so it wont fall of the box)*
 3) The card holder
 
-[![lid_mount](Images/casing/lid_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
+[![lid_mount](Images/casing/lid_mount.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid_mounts.scad)
 [![lid](Images/casing/lid.png)](https://github.com/ThomasKramp/kaarten_shieter/blob/main/3d_casing/6_lid.scad)
 ## Lazercutter
 Only the base plate will be made using the lasercutter. Three of these base plates will be glued together to make the full base. The files can be found in the *[/laser_cutter](https://github.com/ThomasKramp/kaarten_shieter/tree/main/laser_cutter)*

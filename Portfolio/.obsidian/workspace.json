@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b33aa96ee3b1fcab",
+            "id": "37e687c9ad2e515a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "37e687c9ad2e515a",
+            "id": "2457ddb535a353fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -177,10 +177,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b33aa96ee3b1fcab",
+  "active": "37e687c9ad2e515a",
   "lastOpenFiles": [
     "Kaarten Shieter (url).md",
     "Kaarten Shieter.md",
+    "Files.md",
     "Images/arduino_ide_settings.png",
     "Images/settings.png",
     "Datasheets/esp32_d1_mini_datasheet.pdf",

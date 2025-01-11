@@ -430,7 +430,7 @@ The lid is a combination of three parts:
 2) The lid mounts *(so it wont fall of the box)*
 3) The card holder
 
-[![lid_mount](Images/casing/lid_mount.png)](../3d_casing/6_lid.scad)
+[![lid_mount](Images/casing/lid_mount.png)](../3d_casing/6_lid_mounts.scad)
 [![lid](Images/casing/lid.png)](../3d_casing/6_lid.scad)
 ## Lazercutter
 Only the base plate will be made using the lasercutter. Three of these base plates will be glued together to make the full base. The files can be found in the *[/laser_cutter](../laser_cutter)*
@@ -540,14 +540,14 @@ The first step is to make sure all modules work separately. The modules in quest
 - [Bluetooth](../arduino_sketches/1_bluetooth/1_bluetooth.ino)
 
 The second step consist of combining the base sketches step by step:
-- [Tilt & shoot](./arduino_sketches/2_tilt_and_shoot/2_tilt_and_shoot.ino) *(combines **Card Motor** and **Servo**)*
+- [Tilt & shoot](../arduino_sketches/2_tilt_and_shoot/2_tilt_and_shoot.ino) *(combines **Card Motor** and **Servo**)*
 - [Measure & tilt](../arduino_sketches/2_measure_and_tilt/2_measure_and_tilt.ino) *(combines **Servo** and **Sensor**)*
 - [Measure & shoot](../arduino_sketches/2_measure_and_shoot/2_measure_and_shoot.ino) *(combines **Tilt & shoot** and **Measure & tilt**)*
 - [Bluetooth aim](../arduino_sketches/2_bluetooth_aim/2_bluetooth_aim.ino) *(combines **Rotation motor** and **Bluetooth**)*
 
 The last step is the [combination of all sketches](../arduino_sketches/3_aim_and_shoot/3_aim_and_shoot.ino). This is the file used in the demo.
 ## Demo
-![demo](https://youtu.be/q7-Qh3FckiI)
+![demo](Files/demo.mp4)
 # Improvements
 - **Remove the laser components.**
   As mentioned in the beginning and visible in the video, a laser pointer would be worthless due to the limited range of the module and the arcing when a card is shot.
